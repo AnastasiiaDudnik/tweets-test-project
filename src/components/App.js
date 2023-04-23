@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-export const App = () => {
+const App = () => {
   return (
     <Routes>
       <Route path="/" element={<div>Layout</div>}>
@@ -10,3 +10,5 @@ export const App = () => {
     </Routes>
   );
 };
+
+export default App;
