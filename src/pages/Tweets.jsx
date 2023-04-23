@@ -1,5 +1,7 @@
 import { CardList } from "../components/CardList/CardList";
 
-export const Tweets = () => {
+function Tweets() {
   return <CardList />;
-};
+}
+
+export default Tweets;
