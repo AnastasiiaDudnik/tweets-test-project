@@ -12,7 +12,7 @@ export const Card = ({ user: { name, tweets, avatar, followers } }) => {
     <li>
       <img src={avatar} alt={name} />
       <p>{tweets} tweets</p>
-      <p>{followers} followers</p>
+      <p>{Number(followers).toLocaleString("en-US")} followers</p>
 
       {follow ? (
         <button type="button" onClick={toggleFollow}>
