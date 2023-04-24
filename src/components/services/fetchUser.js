@@ -2,10 +2,8 @@ import axios from "axios";
 
 axios.defaults.baseURL = "https://64455cc4914c816083cd1353.mockapi.io/tweets";
 
-export const getUser = async () => {
-  const pagination = "limit=3&page=1";
-
+export const getUser = async (page) => {
   try {
-    return await axios.get(`/users?${pagination}`);
+    return await axios.get(`/users?limit=3&page=${page}`);
   } catch (error) {}
 };
