@@ -1,3 +1,7 @@
 export const FollowButton = () => {
-  return <button type="button">Follow</button>;
+  return (
+    <button type="button">
+      <span>Follow</span>
+    </button>
+  );
 };
