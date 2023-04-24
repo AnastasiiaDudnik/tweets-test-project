@@ -5,16 +5,25 @@ import { FollowingButton } from "../FollowingButton/FollowingButton";
 
 export const Card = ({ user: { name, tweets, avatar, followers } }) => {
   const [follow, setFollow] = useState(false);
+  const [countFollowers, setCountFollowers] = useState(Number(followers));
 
   const toggleFollow = () => {
     setFollow(!follow);
+
+    if (!follow) {
+      setCountFollowers((prevState) => prevState + 1);
+    }
+
+    if (follow) {
+      setCountFollowers((prevState) => prevState - 1);
+    }
   };
 
   return (
     <li>
       <img src={avatar} alt={name} />
       <p>{tweets} tweets</p>
-      <p>{Number(followers).toLocaleString("en-US")} followers</p>
+      <p>{countFollowers.toLocaleString("en-US")} followers</p>
 
       {follow ? (
         <FollowingButton onClick={toggleFollow} />
