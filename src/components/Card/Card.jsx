@@ -1,11 +1,32 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FollowButton } from "../FollowButton/FollowButton";
 import { FollowingButton } from "../FollowingButton/FollowingButton";
 
-export const Card = ({ user: { name, tweets, avatar, followers } }) => {
-  const [follow, setFollow] = useState(false);
-  const [countFollowers, setCountFollowers] = useState(Number(followers));
+const getStatus = (id) => {
+  const status = localStorage.getItem(`follow-${id}`);
+  const parsedStatus = JSON.parse(status);
+
+  if (parsedStatus) {
+    return parsedStatus;
+  }
+};
+
+const getFollowers = (id) => {
+  const data = localStorage.getItem(`followers-${id}`);
+  return JSON.parse(data);
+};
+
+export const Card = ({ user: { id, name, tweets, avatar, followers } }) => {
+  const [follow, setFollow] = useState(getStatus(id) || false);
+  const [countFollowers, setCountFollowers] = useState(
+    getFollowers(id) || Number(followers)
+  );
+
+  useEffect(() => {
+    localStorage.setItem(`follow-${id}`, follow);
+    localStorage.setItem(`followers-${id}`, countFollowers);
+  }, [countFollowers, follow, id]);
 
   const toggleFollow = () => {
     setFollow(!follow);
