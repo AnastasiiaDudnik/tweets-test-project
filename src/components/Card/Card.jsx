@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import { FollowButton } from "../FollowButton/FollowButton";
+import { FollowingButton } from "../FollowingButton/FollowingButton";
 
 export const Card = ({ user: { name, tweets, avatar, followers } }) => {
   const [follow, setFollow] = useState(false);
@@ -15,11 +17,9 @@ export const Card = ({ user: { name, tweets, avatar, followers } }) => {
       <p>{Number(followers).toLocaleString("en-US")} followers</p>
 
       {follow ? (
-        <button type="button" onClick={toggleFollow}>
-          Following
-        </button>
+        <FollowingButton onClick={toggleFollow} />
       ) : (
-        <button onClick={toggleFollow}>Follow</button>
+        <FollowButton onClick={toggleFollow} />
       )}
     </li>
   );
