@@ -2,7 +2,17 @@ import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { FollowButton } from "../FollowButton/FollowButton";
 import { FollowingButton } from "../FollowingButton/FollowingButton";
-import { CardItem, ImgContainer, UserImg, TextWrap, Text } from "./Card.styled";
+import {
+  CardItem,
+  ImgContainer,
+  UserImg,
+  TextWrap,
+  Text,
+  UpperSide,
+  Logo,
+  Line,
+  User,
+} from "./Card.styled";
 
 const getStatus = (id) => {
   const status = localStorage.getItem(`follow-${id}`);
@@ -43,9 +53,16 @@ export const Card = ({ user: { id, name, tweets, avatar, followers } }) => {
 
   return (
     <CardItem>
-      <ImgContainer>
-        <UserImg src={avatar} alt={name} />
-      </ImgContainer>
+      <UpperSide>
+        <Logo src={require("../../images/Logo.png")} alt="logo" />
+        <img src={require("../../images/picture2.png")} alt="background" />
+      </UpperSide>
+      <User>
+        <Line></Line>
+        <ImgContainer>
+          <UserImg src={avatar} alt={name} />
+        </ImgContainer>
+      </User>
       <TextWrap>
         <Text>{tweets} tweets</Text>
         <Text>{countFollowers.toLocaleString("en-US")} followers</Text>
