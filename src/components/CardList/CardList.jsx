@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getUser } from "../services/fetchUser";
 import { Card } from "../Card/Card";
 import { LoadMoreButton } from "../LoadMore/LoadMore";
+import { List } from "./CardList.styled";
 
 export const CardList = () => {
   const [userList, setUserList] = useState([]);
@@ -29,11 +30,11 @@ export const CardList = () => {
   return (
     <>
       {error && <p>{error.message}</p>}
-      <ul>
+      <List>
         {userList.map((user) => (
           <Card key={user.id} user={user} />
         ))}
-      </ul>
+      </List>
       <LoadMoreButton onClick={onLoadMore} />
     </>
   );

@@ -42,7 +42,9 @@ export const Card = ({ user: { id, name, tweets, avatar, followers } }) => {
 
   return (
     <li>
-      <img src={avatar} alt={name} />
+      <div>
+        <img src={avatar} alt={name} />
+      </div>
       <p>{tweets} tweets</p>
       <p>{countFollowers.toLocaleString("en-US")} followers</p>
 
