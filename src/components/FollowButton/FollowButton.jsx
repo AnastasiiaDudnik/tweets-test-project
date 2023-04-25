@@ -1,7 +1,9 @@
+import { Follow, FollowTxt } from "./FollowButton.styled";
+
 export const FollowButton = ({ onClick }) => {
   return (
-    <button type="button" onClick={onClick}>
-      Follow
-    </button>
+    <Follow type="button" onClick={onClick}>
+      <FollowTxt>Follow</FollowTxt>
+    </Follow>
   );
 };
