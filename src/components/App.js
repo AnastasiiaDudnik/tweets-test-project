@@ -9,11 +9,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<div>Home page</div>} />
-        <Route path="/tweets" element={<TweetsPage />}>
-          <Route path="all" element={<div>all tweets</div>} />
-          <Route path="following" element={<div>all tweets</div>} />
-          <Route path="follow" element={<div>all tweets</div>} />
-        </Route>
+        <Route path="/tweets" element={<TweetsPage />} />
         <Route path="*" element={<div>Not found</div>} />
       </Route>
     </Routes>
