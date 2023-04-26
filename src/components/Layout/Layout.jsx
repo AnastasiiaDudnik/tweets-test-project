@@ -9,7 +9,11 @@ export const Layout = () => {
     <Container>
       <Navigation />
       <MainContent>
-        <Suspense fallback={<PropagateLoader aria-label="Loading Spinner" />}>
+        <Suspense
+          fallback={
+            <PropagateLoader color="#672cb5" aria-label="Loading Spinner" />
+          }
+        >
           <Outlet />
         </Suspense>
       </MainContent>
