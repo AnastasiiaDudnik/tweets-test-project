@@ -12,6 +12,7 @@ import {
   Logo,
   Line,
   User,
+  UpperImg,
 } from "./Card.styled";
 
 const getStatus = (id) => {
@@ -55,7 +56,7 @@ export const Card = ({ user: { id, name, tweets, avatar, followers } }) => {
     <CardItem>
       <UpperSide>
         <Logo src={require("../../images/Logo.png")} alt="logo" />
-        <img src={require("../../images/picture2.png")} alt="background" />
+        <UpperImg src={require("../../images/picture2.png")} alt="background" />
       </UpperSide>
       <User>
         <Line></Line>

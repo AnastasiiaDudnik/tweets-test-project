@@ -5,8 +5,8 @@ export const CardItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: 380px;
+  height: 460px;
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,
@@ -69,6 +69,8 @@ export const Text = styled.p`
 
 export const UpperSide = styled.div`
   position: relative;
+  top: 28px;
+  display: flex;
 `;
 
 export const Logo = styled.img`
@@ -76,6 +78,8 @@ export const Logo = styled.img`
   top: 0;
   left: 0;
 `;
+
+export const UpperImg = styled.img``;
 
 export const Line = styled.div`
   position: absolute;
