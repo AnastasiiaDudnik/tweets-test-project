@@ -4,6 +4,7 @@ import { lazy } from "react";
 
 const TweetsPage = lazy(() => import("../pages/Tweets"));
 const HomePage = lazy(() => import("../pages/Home"));
+const NotFoundPage = lazy(() => import("../pages/NotFoundPage"));
 
 const App = () => {
   return (
@@ -11,7 +12,7 @@ const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="/tweets" element={<TweetsPage />} />
-        <Route path="*" element={<div>Not found</div>} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );
