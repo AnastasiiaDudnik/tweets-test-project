@@ -1,3 +1,5 @@
+import { Greeting } from "./Welcome.styled";
+
 export const Welcome = () => {
-  return <div>Welcome to Tweets!</div>;
+  return <Greeting>Welcome to Tweets!</Greeting>;
 };
