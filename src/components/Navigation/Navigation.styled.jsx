@@ -7,12 +7,6 @@ export const Header = styled.header`
   padding: 24px;
   margin-bottom: 26px;
   color: #fff;
-  //   background: radial-gradient(
-  //     circle,
-  //     rgba(154, 63, 251, 1) 0%,
-  //     rgba(134, 36, 124, 1) 100%,
-  //     rgba(252, 70, 107, 1) 100%
-  //   );
   border-radius: 10px;
 `;
 
