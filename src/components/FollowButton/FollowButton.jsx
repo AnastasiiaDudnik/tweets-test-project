@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Follow, FollowTxt } from "./FollowButton.styled";
 
 export const FollowButton = ({ onClick }) => {
@@ -6,4 +7,8 @@ export const FollowButton = ({ onClick }) => {
       <FollowTxt>Follow</FollowTxt>
     </Follow>
   );
+};
+
+FollowButton.PropType = {
+  onClick: PropTypes.func.isRequired,
 };
