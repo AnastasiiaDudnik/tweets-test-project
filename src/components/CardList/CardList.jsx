@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getUser } from "../services/fetchUser";
+import { getUser } from "../../services/fetchUser";
 import { Card } from "../Card/Card";
 import { LoadMoreButton } from "../LoadMore/LoadMore";
 import { List } from "./CardList.styled";
