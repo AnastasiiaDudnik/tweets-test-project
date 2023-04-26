@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import { IoIosArrowBack } from "react-icons/io";
+import { StyledLink } from "./GoBack.styled";
 
 export const GoBack = () => {
   return (
-    <Link to="/">
-      <AiOutlineArrowLeft />
+    <StyledLink to="/">
+      <IoIosArrowBack />
       Back home
-    </Link>
+    </StyledLink>
   );
 };
