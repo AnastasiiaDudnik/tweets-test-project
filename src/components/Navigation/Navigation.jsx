@@ -1,12 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { Header, Navigations, Link } from "./Navigation.styled";
 
 export const Navigation = () => {
   return (
-    <header>
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/tweets">Tweets</NavLink>
-      </nav>
-    </header>
+    <Header>
+      <Navigations>
+        <Link to="/">Home</Link>
+        <Link to="/tweets">Tweets</Link>
+      </Navigations>
+    </Header>
   );
 };
